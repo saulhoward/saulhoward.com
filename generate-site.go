@@ -37,31 +37,56 @@ func main() {
 		panic(err)
 	}
 
-	// content
-	content, err := ioutil.ReadFile("./content/index.md")
+	// index
+	indexContent, err := ioutil.ReadFile("./content/index.md")
 	if err != nil {
 		panic(err)
 	}
-	contentHTML := blackfriday.MarkdownCommon(content)
-
-	// template
-	t, err := template.ParseFiles("./templates/index.html")
-	if err != nil {
-		panic(err)
-	}
-	f, err := os.Create("./www/index.html")
-	if err != nil {
-		panic(err)
-	}
-	err = t.Execute(f, &tmplData{
+	indexContentHTML := blackfriday.MarkdownCommon(indexContent)
+	indexData := &tmplData{
 		VendorCSS:      template.CSS(string(vendorCSS)),
 		VendorThemeCSS: template.CSS(string(vendorThemeCSS)),
 		CustomCSS:      template.CSS(string(customCSS)),
 		Favicon:        template.HTML(string(favicon)),
-		MainContent:    template.HTML(string(contentHTML)),
-	})
+		MainContent:    template.HTML(string(indexContentHTML)),
+	}
+	err = parseTemplate("./templates/index.html", "./www/index.html", indexData)
 	if err != nil {
 		panic(err)
 	}
+
+	// 404
+	notFoundContent, err := ioutil.ReadFile("./content/404.md")
+	if err != nil {
+		panic(err)
+	}
+	notFoundContentHTML := blackfriday.MarkdownCommon(notFoundContent)
+	notFoundData := &tmplData{
+		VendorCSS:      template.CSS(string(vendorCSS)),
+		VendorThemeCSS: template.CSS(string(vendorThemeCSS)),
+		CustomCSS:      template.CSS(string(customCSS)),
+		Favicon:        template.HTML(string(favicon)),
+		MainContent:    template.HTML(string(notFoundContentHTML)),
+	}
+	err = parseTemplate("./templates/index.html", "./www/404.html", notFoundData)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func parseTemplate(templateFile, destFile string, data *tmplData) error {
+	t, err := template.ParseFiles(templateFile)
+	if err != nil {
+		return err
+	}
+	f, err := os.Create(destFile)
+	if err != nil {
+		return err
+	}
+	err = t.Execute(f, data)
+	if err != nil {
+		return err
+	}
 	f.Close()
+	return nil
 }
