@@ -9,6 +9,7 @@ import (
 )
 
 type tmplData struct {
+	NormalizeCSS   template.CSS
 	VendorCSS      template.CSS
 	VendorThemeCSS template.CSS
 	CustomCSS      template.CSS
@@ -18,6 +19,10 @@ type tmplData struct {
 
 func main() {
 	// css
+	normalizeCSS, err := ioutil.ReadFile("./node_modules/normalize-css/normalize.css")
+	if err != nil {
+		panic(err)
+	}
 	vendorCSS, err := ioutil.ReadFile("./node_modules/hack/dist/hack.css")
 	if err != nil {
 		panic(err)
@@ -44,6 +49,7 @@ func main() {
 	}
 	indexContentHTML := blackfriday.MarkdownCommon(indexContent)
 	indexData := &tmplData{
+		NormalizeCSS:   template.CSS(string(normalizeCSS)),
 		VendorCSS:      template.CSS(string(vendorCSS)),
 		VendorThemeCSS: template.CSS(string(vendorThemeCSS)),
 		CustomCSS:      template.CSS(string(customCSS)),
@@ -62,6 +68,7 @@ func main() {
 	}
 	notFoundContentHTML := blackfriday.MarkdownCommon(notFoundContent)
 	notFoundData := &tmplData{
+		NormalizeCSS:   template.CSS(string(normalizeCSS)),
 		VendorCSS:      template.CSS(string(vendorCSS)),
 		VendorThemeCSS: template.CSS(string(vendorThemeCSS)),
 		CustomCSS:      template.CSS(string(customCSS)),

@@ -4,9 +4,10 @@
   "description": "my personal site",
   "main": "index.html",
   "dependencies": {
+    "normalize-css": "^2.3.1"
   },
   "devDependencies": {
-    "hack": "^0.7.7"
+    "hack": "^0.8.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

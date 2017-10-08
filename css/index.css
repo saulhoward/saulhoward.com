@@ -37,5 +37,6 @@ body > .container {
 
 header h1 {
     text-transform: uppercase;
+    display: table-cell !important;
 }
 
