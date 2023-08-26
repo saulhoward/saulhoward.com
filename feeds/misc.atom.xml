@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Saul Howard - misc</title><link href="https://saulhoward.com/" rel="alternate"></link><link href="https://saulhoward.com/feeds/misc.atom.xml" rel="self"></link><id>https://saulhoward.com/</id><updated>2023-08-26T00:00:00+01:00</updated><entry><title>Where’s the web 2023</title><link href="https://saulhoward.com/web-development-2023" rel="alternate"></link><published>2023-08-26T00:00:00+01:00</published><updated>2023-08-26T00:00:00+01:00</updated><author><name>Saul Howard</name></author><id>tag:saulhoward.com,2023-08-26:/web-development-2023</id><summary type="html">&lt;p&gt;I tried out a few web frameworks and libraries recently. My thoughts:&lt;/p&gt;
+&lt;h3&gt;Vite&lt;/h3&gt;
+&lt;p&gt;I needed to upgrade some old React apps. It turned out they killed &lt;code&gt;create-react-app&lt;/code&gt;, and it seems like Vite is the go-to “just a React app” framework.&lt;/p&gt;
+&lt;p&gt;Vite made the refactor painless. I think the only incompatible …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I tried out a few web frameworks and libraries recently. My thoughts:&lt;/p&gt;
+&lt;h3&gt;Vite&lt;/h3&gt;
+&lt;p&gt;I needed to upgrade some old React apps. It turned out they killed &lt;code&gt;create-react-app&lt;/code&gt;, and it seems like Vite is the go-to “just a React app” framework.&lt;/p&gt;
+&lt;p&gt;Vite made the refactor painless. I think the only incompatible thing was a new format for env vars. Other than that, it kept out of the way. Recommended.&lt;/p&gt;
+&lt;h3&gt;Remix&lt;/h3&gt;
+&lt;p&gt;I wanted a new app that would deploy to Cloudflare Pages/Workers. The worker runs an edge endpoint proxying to a GCP Python service for the heavy lifting.&lt;/p&gt;
+&lt;p&gt;Remix was impressive. It has a nice balance of web fundamentals and React. I’m not so sure about the push away from React with tech like &lt;code&gt;htmx&lt;/code&gt;. I like React! I see their point — React apps are in some ways ephemeral, it’s diverging from the web and the ecosystem is chaotic. But for quick development in the real world, it works. I’d choose Remix over NextJS. Remix feels lighter, with less custom magic.&lt;/p&gt;
+&lt;h3&gt;Astro&lt;/h3&gt;
+&lt;p&gt;This one was cool. Astro has a great set of features for a static site generator that you can integrate into the rest of your stack with MDX and React, while keeping all the posts in Markdown.&lt;/p&gt;
+&lt;p&gt;I could share React components from the main webapp for the layout and added endpoints to the Astro app to serve the Markdown content to the other services.&lt;/p&gt;
+&lt;h3&gt;Bun&lt;/h3&gt;
+&lt;p&gt;I want to love Bun. JavaScript/TypeScript/NodeJS is a mess, and one of these attempts to replace the toolchain in one blow has to work.&lt;/p&gt;
+&lt;p&gt;I found myself writing a NodeJS service, so I set it up with Bun, and it was great — until I tried to pull in the SDK libs I needed to use. It turns out the NodeJS compatibility isn’t there yet.&lt;/p&gt;
+&lt;p&gt;Usually the only time I’m writing NodeJS is because of a specific library I want to use. Bun is great for writing dependency-free services, but if the service is dependency-free why would I use TypeScript? I understand they are aiming for 100% compatibility, and I hope they get there.&lt;/p&gt;</content><category term="misc"></category></entry></feed>
