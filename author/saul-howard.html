@@ -420,16 +420,6 @@ h6 {
   margin-bottom: 0;
   line-height: 1.5rem;
 }
-/* h1 {
-  font-size: 4.242rem;
-  line-height: 4.5rem;
-  margin-top: 3rem;
-} */
-/* h1 {
-  font-size: 2.828rem;
-  line-height: 3rem;
-  margin-top: 3rem;
-} */
 h1 {
   font-size: 2rem;
   line-height: 2rem;
@@ -442,7 +432,7 @@ h3 {
   font-size: 1.2rem;
 }
 h4 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 /* Tables */
 table {
@@ -526,6 +516,13 @@ body > nav ul {
   gap: 2rem;
 }
 
+h2,
+h3,
+h4,
+h5 {
+  color: var(--light-grey);
+}
+
 .about-me {
   padding-bottom: 1.5em;
 }
@@ -552,12 +549,6 @@ body > nav ul {
 }
 #post-list .post-info {
   padding: 0.6rem 0;
-}
-#post-list .entry-content > p,
-#post-list .entry-content > h3,
-#post-list .entry-content > h2 {
-  margin: 0;
-  color: var(--light-grey);
 }
 
 code,
@@ -605,7 +596,7 @@ body > footer ul a {
   </p>
 
   <p>
-    I write a substack at
+    I write on this site and sometimes on a substack at
     <a href="https://saulhoward.substack.com/">31 Seconds</a>.
   </p>
 
@@ -618,8 +609,9 @@ body > footer ul a {
 
   <p>
     I produced the feature film
-    <a href="https://brighton-wok.com/">Brighton Wok</a>. I work on applications
-    for <a href="https://dramatheory.org/">Drama Theory</a>.
+    <a href="https://youtu.be/-EKR9xHllEA?si=rjZptXXzQVsI6vKA">Brighton Wok</a>.
+    I work on applications for
+    <a href="https://dramatheory.org/">Drama Theory</a>.
   </p>
 
   <p>
@@ -654,7 +646,8 @@ body > footer ul a {
         </footer>
         <!-- /.post-info -->
         <div class="entry-content"><p>Google’s announced a GPT-4 killer, Gemini, for release by December. There’s no question that OpenAI have a massive lead, but from the outside, it doesn’t look unassailable. LLMs may have presented Google with the first real threat to their search business.</p>
-<p>LLMs hint at a new interface …</p></div>
+<p>LLMs hint at a new interface to computing. Microsoft’s strength isn’t interfaces, but sales. They can add LLM features to their software as customers need them. Apple can fall back on their hardware — and may see an increasing demand in consumer compute even as they slowly come around to updating iOS. But Google is only an interface. A single UI paradigm — search. They’ll need to move fast.</p>
+<p>I was talking SEO today, and the paradigm already feels outdated. People out there still discovering software through search engines like boomers with cable subscriptions.</p></div>
         <!-- /.entry-content -->
       </article>
     </li>
@@ -682,7 +675,11 @@ body > footer ul a {
         </footer>
         <!-- /.post-info -->
         <div class="entry-content"><p>LLMs (and generative AI generally) have an important feature: broad adoption of LLMs doesn’t require a change in consumer behaviour. LLMs are a complementary technology. We can deploy them right now to the cloud, to people’s smartphones and into enterprise software stacks.</p>
-<p>The iPhone’s success fostered a …</p></div>
+<p>The iPhone’s success fostered a narrative: that swift widespread change of consumer behaviour would be inevitable if the promise was there. But in reality, the unprecedented rise of mobile was overdetermined: the hardware was finally good enough (after decades of development) at the same time that the internet was finally changing consumer behaviour (after many false starts).</p>
+<p>Crypto and VR proponents have been selling them as a wave of technology about to break over our heads. But adoption in their current forms requires consumers to adopt new behaviours — buying (and using) costly barely-good-enough headsets, or changing their financial arrangements. I don’t doubt that we’ll see these technologies changing people’s lives in the future, but it won’t happen until the transition becomes easier for consumers to swallow. Making Crypto and VR not worth betting your balance sheet on.</p>
+<p>LLMs are different. LLM-powered services can sit alongside all existing software stacks, seamlessly providing functionality that wasn’t possible before. Consumers continue using their cloud-backed web and mobile apps and as far as the customer is concerned, their software got better without them having to <em>do</em> anything.</p>
+<p>In this way, LLMs are more like the move to cloud. Cloud-powered features first showed up as options within our traditional desktop apps. “Share” or “Save to Cloud” buttons (with the floppy disk icon, naturally). Users didn’t need to know what it all meant, they could just opt-in to the new functionality alongside their existing workflows. Eventually, consumer’s came to intuit the new model, and apps changed, but it was a gradual process.</p>
+<p>Each technology has its own path to adoption. Growth of LLM-powered services will be smoother than cloud, as it doesn’t need big-bang digital transformations. It’s possible to re-write individual functions within an existing system to take advantage of LLMs. The tech is complementary to our current cloud, web and mobile platforms.</p></div>
         <!-- /.entry-content -->
       </article>
     </li>
@@ -710,9 +707,19 @@ body > footer ul a {
         </footer>
         <!-- /.post-info -->
         <div class="entry-content"><p>I tried out a few web frameworks and libraries recently. My thoughts:</p>
-<h3>Vite</h3>
+<h4>Vite</h4>
 <p>I needed to upgrade some old React apps. It turned out they killed <code>create-react-app</code>, and it seems like Vite is the go-to “just a React app” framework.</p>
-<p>Vite made the refactor painless. I think the only incompatible …</p></div>
+<p>Vite made the refactor painless. I think the only incompatible thing was a new format for env vars. Other than that, it kept out of the way. Recommended.</p>
+<h4>Remix</h4>
+<p>I wanted a new app that would deploy to Cloudflare Pages/Workers. The worker runs an edge endpoint proxying to a GCP Python service for the heavy lifting.</p>
+<p>Remix was impressive. It has a nice balance of web fundamentals and React. I’m not so sure about the push away from React with tech like <code>htmx</code>. I like React! I see their point — React apps are in some ways ephemeral, it’s diverging from the web and the ecosystem is chaotic. But for quick development in the real world, it works. I’d choose Remix over NextJS. Remix feels lighter, with less custom magic.</p>
+<h4>Astro</h4>
+<p>This one was cool. Astro has a great set of features for a static site generator that you can integrate into the rest of your stack with MDX and React, while keeping all the posts in Markdown.</p>
+<p>I could share React components from the main webapp for the layout and added endpoints to the Astro app to serve the Markdown content to the other services.</p>
+<h4>Bun</h4>
+<p>I want to love Bun. JavaScript/TypeScript/NodeJS is a mess, and one of these attempts to replace the toolchain in one blow has to work.</p>
+<p>I found myself writing a NodeJS service, so I set it up with Bun, and it was great — until I tried to pull in the SDK libs I needed to use. It turns out the NodeJS compatibility isn’t there yet.</p>
+<p>Usually the only time I’m writing NodeJS is because of a specific library I want to use. Bun is great for writing dependency-free services, but if the service is dependency-free why would I use TypeScript? I understand they are aiming for 100% compatibility, and I hope they get there.</p></div>
         <!-- /.entry-content -->
       </article>
     </li>
