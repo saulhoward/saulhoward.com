@@ -4,3 +4,5 @@ node_modules
 output
 content/.Ulysses-Group.plist
 content/.Ulysses-Settings.plist
+workspace.json
+
