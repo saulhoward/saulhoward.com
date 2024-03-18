@@ -457,122 +457,171 @@ code {
 .hug {
   margin-top: 0;
 }:root {
-  --dark-purple: #6643b5;
-  --light-purple: #a06ee1;
-  --dark-blue: #4850b9;
-  --light-blue: #5b70f3;
-  --dark-green: #55e0a3;
-  --light-green: #80ffdb;
-  --dark-grey: #323643;
-  --light-grey: #606470;
-  --background: #f7f7f7;
+    --dark-purple: #6643b5;
+    --light-purple: #a06ee1;
+    --dark-blue: #4850b9;
+    --light-blue: #5b70f3;
+    --dark-green: #55e0a3;
+    --light-green: #80ffdb;
+    --dark-grey: #323643;
+    --light-grey: #606470;
+    --background: #f7f7f7;
 }
 
 html {
-  background-color: var(--background);
-  color: var(--dark-grey);
+    background-color: var(--background);
+    color: var(--dark-grey);
 }
 
 a {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:link {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:visited {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:focus {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
+
 a:hover {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
+
 a:active {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
 
 body {
-  margin: 0 auto;
-  max-width: 65ch;
-  padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 65ch;
+    padding: 2rem 1rem;
 }
 
 body > header a {
-  text-decoration: none;
-  color: var(--light-purple) !important;
+    text-decoration: none;
+    color: var(--light-purple) !important;
 }
+
 body > header h1 {
-  margin: 0;
-  /* font-size: 2.828rem; */
-  line-height: 2.6rem;
+    margin: 0;
+    /* font-size: 2.828rem; */
+    line-height: 2.6rem;
 }
+
 body > nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  color: var(--light-grey);
+    color: var(--light-grey);
 }
 
 .about-me {
-  padding-bottom: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 #post-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .entry-title > a {
-  text-decoration: none;
-  color: var(--dark-purple) !important;
+    text-decoration: none;
+    color: var(--dark-purple) !important;
 }
+
 .post-info {
-  padding: 1rem 0;
-  font-size: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+    padding: 1rem 0;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
+
 #post-list .post-info {
-  padding: 0.6rem 0;
+    padding: 0.6rem 0;
 }
 
 code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
 }
 
 body > footer {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: end;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: end;
 }
 
 body > footer ul {
-  list-style: none;
-  display: flex;
-  align-items: end;
-  flex-direction: column;
-  gap: 0.5rem;
+    list-style: none;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 0.5rem;
 }
+
 body > footer ul a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+article table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-color: rgb(226 232 240);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+article thead {
+    border-width: 0;
+}
+
+article thead > tr {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(226 232 240);
+}
+
+article tbody {
+    border-width: 0;
+}
+
+article tbody > tr {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(226 232 240);
+}
+
+article td, article th {
+    padding: 0.5rem;
+    border-style: solid;
+    border-right-width: 1px;
+    border-color: rgb(226 232 240);
 }    </style>
 </head>
 
@@ -588,6 +637,8 @@ body > footer ul a {
 <h1>Archives for Saul Howard</h1>
 
 <dl>
+    <dt>Mon 18 March 2024</dt>
+    <dd><a href="https://saulhoward.com/anatomy-of-a-fall">Anatomy of a Fall</a></dd>
     <dt>Thu 04 January 2024</dt>
     <dd><a href="https://saulhoward.com/dramatic-interfaces">Dramatic interfaces</a></dd>
     <dt>Thu 31 August 2023</dt>

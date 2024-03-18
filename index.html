@@ -457,122 +457,171 @@ code {
 .hug {
   margin-top: 0;
 }:root {
-  --dark-purple: #6643b5;
-  --light-purple: #a06ee1;
-  --dark-blue: #4850b9;
-  --light-blue: #5b70f3;
-  --dark-green: #55e0a3;
-  --light-green: #80ffdb;
-  --dark-grey: #323643;
-  --light-grey: #606470;
-  --background: #f7f7f7;
+    --dark-purple: #6643b5;
+    --light-purple: #a06ee1;
+    --dark-blue: #4850b9;
+    --light-blue: #5b70f3;
+    --dark-green: #55e0a3;
+    --light-green: #80ffdb;
+    --dark-grey: #323643;
+    --light-grey: #606470;
+    --background: #f7f7f7;
 }
 
 html {
-  background-color: var(--background);
-  color: var(--dark-grey);
+    background-color: var(--background);
+    color: var(--dark-grey);
 }
 
 a {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:link {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:visited {
-  color: var(--dark-blue);
+    color: var(--dark-blue);
 }
+
 a:focus {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
+
 a:hover {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
+
 a:active {
-  color: var(--light-blue);
+    color: var(--light-blue);
 }
 
 body {
-  margin: 0 auto;
-  max-width: 65ch;
-  padding: 2rem 1rem;
+    margin: 0 auto;
+    max-width: 65ch;
+    padding: 2rem 1rem;
 }
 
 body > header a {
-  text-decoration: none;
-  color: var(--light-purple) !important;
+    text-decoration: none;
+    color: var(--light-purple) !important;
 }
+
 body > header h1 {
-  margin: 0;
-  /* font-size: 2.828rem; */
-  line-height: 2.6rem;
+    margin: 0;
+    /* font-size: 2.828rem; */
+    line-height: 2.6rem;
 }
+
 body > nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  color: var(--light-grey);
+    color: var(--light-grey);
 }
 
 .about-me {
-  padding-bottom: 1.5em;
+    padding-bottom: 1.5em;
 }
 
 #post-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .entry-title > a {
-  text-decoration: none;
-  color: var(--dark-purple) !important;
+    text-decoration: none;
+    color: var(--dark-purple) !important;
 }
+
 .post-info {
-  padding: 1rem 0;
-  font-size: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+    padding: 1rem 0;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
+
 #post-list .post-info {
-  padding: 0.6rem 0;
+    padding: 0.6rem 0;
 }
 
 code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
 }
 
 body > footer {
-  padding-top: 2rem;
-  display: flex;
-  justify-content: end;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: end;
 }
 
 body > footer ul {
-  list-style: none;
-  display: flex;
-  align-items: end;
-  flex-direction: column;
-  gap: 0.5rem;
+    list-style: none;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 0.5rem;
 }
+
 body > footer ul a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+article table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-color: rgb(226 232 240);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+article thead {
+    border-width: 0;
+}
+
+article thead > tr {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(226 232 240);
+}
+
+article tbody {
+    border-width: 0;
+}
+
+article tbody > tr {
+    border-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(226 232 240);
+}
+
+article td, article th {
+    padding: 0.5rem;
+    border-style: solid;
+    border-right-width: 1px;
+    border-color: rgb(226 232 240);
 }    </style>
 </head>
 
@@ -622,6 +671,165 @@ body > footer ul a {
 </section>   <h2>Posts</h2>
 
   <ol id="post-list">
+    <li>
+      <article class="hentry">
+        <header>
+          <h3 class="entry-title">
+            <a
+              href="https://saulhoward.com/anatomy-of-a-fall"
+              rel="bookmark"
+              title="Permalink to Anatomy of a Fall"
+              >Anatomy of a Fall</a
+            >
+          </h3>
+        </header>
+        <footer class="post-info">
+          <time class="published" datetime="2024-03-18T00:00:00+00:00">
+            Mon 18 March 2024
+          </time>
+          <!-- <address class="vcard author">
+            By             <a class="url fn" href="https://saulhoward.com/author/saul-howard.html"
+              >Saul Howard</a
+            >
+          </address> -->
+        </footer>
+        <!-- /.post-info -->
+        <div class="entry-content"><p>Over the weekend, I saw the movie Anatomy of a Fall. It was fascinating to get a look at the French justice system. Common Law justice systems seem to be highly overrepresented in film. I'm not sure whether this is because the British and Americans have a particular liking for courtroom drama, or I'm just not watching the right foreign movies.</p>
+<p>The question at the heart of the movie was, did Sandra kill her husband? You might think this is the model:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Sandra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Sandra</strong></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Kill Samuel</td>
+<td style="text-align: center;">?</td>
+</tr>
+</tbody>
+</table>
+<p>However, this isn't quite right, as the Option "Kill Samuel" doesn't refer to a future possibility. Rather, the drama in the film revolves around whether Sandra will be convicted for murder:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Sandra</th>
+<th style="text-align: center;">Prosecutor</th>
+<th><em>dilemmas</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Court</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Convict Sandra</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td>Sandra, Prosecutor</td>
+</tr>
+</tbody>
+</table>
+<p>The Court's position is of course unstated. This means that Sandra (and by extension her Defence) and the Prosector both have persuasion dilemmas with respect to the Court. They are compelled to persuade the Court to take their position.</p>
+<p>Much of the drama in the film comes from how powerless Sandra is to influence events. She provides compelling testimony, but so does the Prosecutor. In the end, it comes down to her son Daniel's testimony, and whether he will take her side.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Sandra</th>
+<th style="text-align: center;">Prosecutor</th>
+<th style="text-align: center;">Daniel</th>
+<th><em>dilemmas</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Court</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Convict Sandra</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td>Sandra, Prosecutor</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Daniel</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Testify against Sandra</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">-</td>
+<td>Sandra, Prosecutor</td>
+</tr>
+</tbody>
+</table>
+<p>This gives Sandra and the Prosecutor persuasion dilemmas with respect to Daniel. Sandra in particular is compelled to persuade him to reject the idea of testifying against her. This is fraught, as if Daniel takes his Mother's side, then it means accepting the idea that his father took his own life. For much of the film, Daniel is clearly undecided as to whether he believes his Mother (represented by the -). The film's climax comes when Daniel makes his decision over this option. Although the film does not take a side, ultimately it seems that Daniel persuades himself of his Mother's innocence.</p>
+<blockquote>
+<p>Actually, when we lack an element to judge something, and the lack is unbearable, all we can do is decide. You see? To overcome doubt, sometimes we have to… decide to sway one way rather than the other. Since you need to believe one thing but have two choices, you must choose.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Sandra</th>
+<th style="text-align: center;">Prosecutor</th>
+<th style="text-align: center;">Daniel</th>
+<th><em>dilemmas</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Court</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Convict Sandra</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">⨉</td>
+<td>Sandra, Prosecutor, Daniel</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Daniel</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;">Testify against Sandra</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">⨉</td>
+<td>Sandra, Prosecutor</td>
+</tr>
+</tbody>
+</table></div>
+        <!-- /.entry-content -->
+      </article>
+    </li>
     <li>
       <article class="hentry">
         <header>
