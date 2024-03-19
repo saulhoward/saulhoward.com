@@ -440,11 +440,6 @@ table {
   border-spacing: 0px;
   border-collapse: collapse;
 }
-table td,
-table th {
-  padding: 0;
-  line-height: 33px;
-}
 /* Code blocks */
 code {
   vertical-align: bottom;
@@ -560,6 +555,14 @@ h5 {
     padding: 0.6rem 0;
 }
 
+blockquote {
+  border-left: 4px solid var(--light-purple);
+  padding-left: 2rem;
+  font-style: italic;
+
+
+}
+
 code,
 kbd,
 samp,
@@ -586,10 +589,13 @@ body > footer ul a {
 }
 
 article table {
+    font-size: 90%;
     width: auto;
     margin-left: auto;
     margin-right: auto;
     table-layout: fixed;
+    border-spacing: 0px;
+    border-collapse: collapse;
     border-color: rgb(226 232 240);
     border-width: 1px;
     border-style: solid;

@@ -443,11 +443,6 @@ table {
   border-spacing: 0px;
   border-collapse: collapse;
 }
-table td,
-table th {
-  padding: 0;
-  line-height: 33px;
-}
 /* Code blocks */
 code {
   vertical-align: bottom;
@@ -563,6 +558,14 @@ h5 {
     padding: 0.6rem 0;
 }
 
+blockquote {
+  border-left: 4px solid var(--light-purple);
+  padding-left: 2rem;
+  font-style: italic;
+
+
+}
+
 code,
 kbd,
 samp,
@@ -589,10 +592,13 @@ body > footer ul a {
 }
 
 article table {
+    font-size: 90%;
     width: auto;
     margin-left: auto;
     margin-right: auto;
     table-layout: fixed;
+    border-spacing: 0px;
+    border-collapse: collapse;
     border-color: rgb(226 232 240);
     border-width: 1px;
     border-style: solid;
@@ -639,7 +645,7 @@ article td, article th {
     <main>
 <section id="content">
 <section class="about-me">
-  <p>I’m a hacker in London.</p>
+  <p>I’m a hacker in London. I'm the co-founder of <a href="https://deepdrama.com">Deep Drama</a>.</p>
 
   <p>
     I create software at
@@ -674,6 +680,123 @@ article td, article th {
 </section> <h1>Articles in the dailydrama category</h1>
 
   <ol id="post-list">
+    <li>
+      <article class="hentry">
+        <header>
+          <h3 class="entry-title">
+            <a
+              href="https://saulhoward.com/interface-to-human-language"
+              rel="bookmark"
+              title="Permalink to Interface to human language"
+              >Interface to human language</a
+            >
+          </h3>
+        </header>
+        <footer class="post-info">
+          <time class="published" datetime="2024-03-19T00:00:00+00:00">
+            Tue 19 March 2024
+          </time>
+          <!-- <address class="vcard author">
+            By             <a class="url fn" href="https://saulhoward.com/author/saul-howard.html"
+              >Saul Howard</a
+            >
+          </address> -->
+        </footer>
+        <!-- /.post-info -->
+        <div class="entry-content"><p>One approach to making use of LLMs is to see it as an oracle: we can say "solve this problem for me", or at least "give me a choice of solutions". As all the answers to our problems can theoretically be generated, we can go ahead and retire all the human theorists and engineers. Science is solved.</p>
+<p>This approach assumes that creative problem solving is a matter of rearranging existing knowledge. Or, if more knowledge is needed, that knowledge acquisition is a process of mechanically recording the universe. Both are mistaken. We don't know the algorithms for creative problem solving or knowledge acquisition. While the "LLM as oracle" approach will certainly produce advancements in knowledge retrieval, it won't create new knowledge.  </p>
+<p>Another approach, one that we're following at <a href="https://deepdrama.com">Deep Drama</a>, is to use the LLM primarily as an interface for human language. The potential of "LLM as language API" is greater than it seems. There is the obvious path of building more powerful User Interfaces far beyond chatbots. But there is also the potential to expand the scope of our software, beyond solving transactional problems to encompass as-yet-untapped social frameworks. Our software has blind spots. Large areas of human knowledge and experience have been overlooked by engineers because of the messiness of their interfaces. </p>
+<p>As an example, I used Deep Drama's LLM-powered Source tool to generate this Drama Theoretic model of a random news article:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Don</th>
+<th style="text-align: center;">Joe</th>
+<th style="text-align: center;">Nip</th>
+<th style="text-align: center;">Uni</th>
+<th style="text-align: left;"><em>dilemmas</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Donald Trump</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Block the deal immediately if winning the 2024 election</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Joe Biden</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Express opposition to the merger</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">Don <strong>T</strong> <em>wrt</em> Joe<br>Uni <strong>T</strong> <em>wrt</em> Joe</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>United Steelworkers labour union</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Oppose the merger</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: left;">Joe <strong>P</strong> <em>wrt</em> Uni<br>Nip <strong>T</strong> <em>wrt</em> Uni</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nippon Steel</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acquire US Steel in a non-hostile deal worth $14.1 billion</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: left;">Don <strong>P</strong> <em>wrt</em> Nip<br>Joe <strong>P</strong> <em>wrt</em> Nip<br>Uni <strong>P</strong> <em>wrt</em> Nip</td>
+</tr>
+<tr>
+<td style="text-align: left;">Introduce new technology and capital to US Steel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">⨉</td>
+<td style="text-align: left;">Joe <strong>P</strong> <em>wrt</em> Nip<br>Uni <strong>P</strong> <em>wrt</em> Nip</td>
+</tr>
+</tbody>
+</table>
+<p>The model's format is explainable and programmable. By using the LLM as an interface to language, Deep Drama can then use this model as the basis for further analysis and interaction, both with LLMs and with traditional interfaces. Deep Drama keeps the knowledge, and the opportunity for creativity, in the hands of the human users.</p></div>
+        <!-- /.entry-content -->
+      </article>
+    </li>
     <li>
       <article class="hentry">
         <header>
