@@ -21,21 +21,6 @@ AUTHOR_FEED_RSS = None
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
-# Blogroll
-LINKS = (
-    ("Clear Line Tech", "https://clearlinetech.com/"),
-    ("X/Twitter", "https://twitter.com/saulhoward"),
-    ("Deep Drama", "https://deepdrama.com/p/jinja/"),
-    ("LinkedIn", "https://www.linkedin.com/in/saulhoward/"),
-    ("Substack", "https://saulhoward.substack.com/"),
-)
-
-# Social widget
-SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-)
-
 DEFAULT_PAGINATION = 10
 
 STATIC_PATHS = ["images", "extra/CNAME"]
