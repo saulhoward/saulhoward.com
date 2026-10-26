@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" fill="currentColor" role="img" aria-labelledby="brick-title">
+  <title id="brick-title">Brick</title>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path fill-rule="evenodd" d="M25 104L178 63Q182 62 186 65L226 86Q229 89 228 94L226 148Q226 151 222 153L71 193Q67 195 63 191L27 171Q23 168 24 163L24 133L22 128ZM33 108L67 126L218 88L180 69ZM73 133L73 185L219 146L222 96ZM31 116L30 164L65 185L65 133Z" />
+    <path d="M34 135L37 164M42 141L44 169M50 147L51 174M57 151L57 177M80 167L92 177M84 157L104 175M94 155L117 171M109 158L127 168M123 158L139 165M174 149L184 153M188 144L199 149M194 107L201 104M51 106L61 103M154 89L165 86" fill="none" stroke="currentColor" stroke-width="3.2" />
+    <path d="M83 145L91 142L91 139L98 138M207 131L210 137L216 138" fill="none" stroke="currentColor" stroke-width="2.8" />
+  </g>
+</svg>
