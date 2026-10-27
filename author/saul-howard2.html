@@ -526,21 +526,38 @@ body > header svg {
 body > header h1 {
     margin: 0;
     /* font-size: 2.828rem; */
-    line-height: 2.6rem;
+    line-height: 1.15;
+}
+
+/* Nav items wrap as whole units. Every item gets a leading "//"; the ul is
+   pulled left by one separator's width and the nav clips it, so the
+   separator at the start of each line is hidden. The padding (offset by
+   negative margins) leaves room for focus outlines. */
+body > nav {
+    margin: 0.25rem -0.25rem -0.25rem;
+    padding: 0.25rem;
+    overflow: hidden;
 }
 
 body > nav ul {
     list-style: none;
-    margin: 0;
+    margin: 0 0 0 -2rem;
     padding: 0;
     display: flex;
     flex-direction: row;
-    gap: 0.75rem;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
 }
 
-body > nav li + li::before {
+body > nav li {
+    white-space: nowrap;
+}
+
+body > nav li::before {
     content: "//";
-    margin-right: 0.75rem;
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
     color: var(--light-grey);
 }
 
@@ -637,6 +654,23 @@ body > footer ul {
 
 body > footer ul a {
     text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    body > footer {
+        flex-direction: column;
+    }
+
+    body > footer svg {
+        order: 1;
+    }
+
+    body > footer ul {
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 0;
+    }
 }
 
 article table {
@@ -878,7 +912,7 @@ main img {
 </svg>        <ul>
             <li><a href="https://twitter.com/saulhoward">twitter.com/saulhoward</a></li>
             <li><a href="https://saulhoward.com">saulhoward.com</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Krazy_Kat">Krazy Kat</a> by G. Herriman, natch</li>
+            <li><a href="https://en.wikipedia.org/wiki/Krazy_Kat">Ignatz</a> by G. Herriman, natch</li>
         </ul>
     </footer>
 </body>
